@@ -1,0 +1,15 @@
+body{
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+}
+.container{
+    font-family: 'Playfair Display', serif;
+}
+
+.heading{
+    text-align: center;
+}
+.container .card {
+    background-color: 	#F8F8FF;
+    border-radius: 25px;
+    outline-style: none;
+}
