@@ -1,35 +1,62 @@
-<%- include('partials_head') %>    
+<%- include('../partials/_blogcss_head') %>
 
-<h1 class= "heading mb-4">Blog Articles</h1>    
-<a href = "/articles/new" class= "btn btn-success">Create new Articles</a>
+<%- include('../partials/_field_navbar.ejs') %>
 
-<% articles.forEach(article =>{ %>
-    
-    <div class =  "card mt-4">
-        <div class = "card-header">
-            <h4 class = "card-title"><%= article.title %></h4>
-            <div class = "card-subtitle text-muted mb-2" >
-                Posted on: <%= article.createdAt.toLocaleDateString() %>        
-            </div>
-            <div class= "card-body">
-                <div class = "card-text mb-2"><%= article.description %>
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href = "articles/<%= article.slug %>" class = "btn btn-outline-primary">View</a>
-                    
-                    <a href = "articles/edit/<%= article.id %>" class = "btn btn-outline-info">Edit</a>
-                    
-                    <form action ="/articles/<%= article.id %>?_method=DELETE" method = "POST" >
-                        <button type =  "submit" class = "btn btn-outline-danger">Delete</button>
-                    </form>
-                </div>
-                
-            </div>
-        </div>
+<div class= "container-blog">
+  
+  <div class= "container-blog-first">
+    <h1 class="head">Welcome</h1>
+    <h1 class="tail">to the Blog</h1>
+    <p>The Freedom to Create the Blogs You Want</p>
+  </div>
+  
+  <div class="container-blog-second">
+    <div class ="container-blog-second-heading">
+      <h1>Blogs</h1>
     </div>
     
-    <%}) %>
-</div>
-
-</body>
-</html>
+    <div class ="container-blog-second-button mb-5">
+      <a href = "/blog/new"  class ="btn btn-outline-success">Create new Articles</a>
+      <form action="/logout?_method=DELETE" method="POST"  class="d-inline">
+         <button type="submit" class ="btn btn-outline-secondary">Log Out</button>
+    
+      </form>
+    </div>
+    
+    <div class= "container-blog-third">
+      <% articles.forEach(article => {%>
+        
+        <div class="card mb-3" style="max-width: 90%;">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img src="/uploads/images/<%= img %>" alt="upload images" height="150px" width= "155px">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                
+                <h5 class="card-title"><%= article.title %></h5>
+                
+                <p class="card-text"><%= article.description %></p>
+                
+                <p class="card-text"><small class="text-muted"><%= article.createdAt.toLocaleDateString() %></small></p>
+                
+                <a href ="/blog/<%= article.slug %>" class ="btn btn-primary"> Read More</a>
+                
+                <a href ="/blog/edit/<%= article.id %>" class ="btn btn-info"> Edit</a>       
+                
+                <form action = "/blog/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+                  <button type="submit"  class="btn btn-danger">Delete</button>  
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div> 
+        <% }) %>                
+      </div> 
+      
+    </div>    
+    
+  </div>    
+  
+  <%- include('../partials/_field_footer') %>  

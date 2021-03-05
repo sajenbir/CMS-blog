@@ -1,0 +1,125 @@
+.navbar .container-fluid{
+    font-family: 'Old Standard TT', serif;
+
+}
+.container-fluid .container-fluid-link{
+    margin-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+}
+.container-fluid .container-fluid-link .container-fluid-link-login a{
+    font-size: 18px;
+    text-decoration: none;
+    
+}
+.container-main{
+    position: relative;
+    width: 100%;
+}
+.container-main .container-main-first img{
+    margin-left: 50%;
+    font-family: 'Playfair Display', serif;
+    
+}
+.container-main .container-main-first .container-main-text h2{
+    position: absolute;
+    left: 80px;
+    top: 130px;
+    font-size: 50px;
+    font-family: 'Old Standard TT', serif;
+    
+}
+.container-main .container-main-first .container-main-text p{
+    position: absolute;
+    font-size: 18px;
+    left: 85px;
+    top: 200px;
+    font-family: 'Playfair Display', serif;
+    
+}
+.container-main .container-main-first a{
+    position: absolute;
+    left: 315px;
+    top: 275px;
+    border-radius: 35px;
+}
+
+.container-main .container-main-second{
+    margin: 50px 0;
+    padding: 25px 70px;
+    background-color: #fde6de;
+    display:flex;
+    align-items: center;
+}
+.container-main .container-main-second .container-main-second-info h2{
+    font-family: 'Old Standard TT', serif;
+    font-size: 35px;
+}
+.container-main .container-main-second .container-main-second-info p{
+    font-family: 'Playfair Display', serif;
+}
+.container-main .container-main-third{
+    display: flex;
+    margin-top: 50px;
+}
+.container-main .container-main-third .container-main-third-text{
+    margin: 80px 30px 20px 80px;
+}
+.container-main .container-main-third .container-main-third-text p{
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+    
+}
+.container-main .container-main-third .container-main-third-text a{
+    margin-left: 250px;
+    border-radius: 35px;
+}
+
+.footer{
+    background-color: #fbf8f8;
+    width: 100%;
+    height:200px;
+    border-top: 1px solid silver;
+    margin-top: 50px;
+    
+}
+.footer .footer-first{ 
+    margin: 50px 40% 35px 40%;
+    display: flex;
+    width: 500px;
+}
+.footer .footer-first h3{
+    padding-right: 20px;
+    padding-top: 10px;
+    border-right: 1px solid black;
+    font-family: 'Satisfy', cursive;
+}
+.footer .footer-first p{
+    margin: 0;
+    padding-left: 15px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 800;
+    font-size: 18px;
+}
+.footer .footer-mid{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px;
+    font-family: 'Playfair Display', serif;
+}
+.footer .footer-mid-text{
+    display: flex;
+}
+
+.footer .footer-mid-text .footer-mid-p{
+    padding-right: 15px;
+    border-right: 1px solid black;
+}
+.footer .footer-mid-text .footer-mid-t{
+    padding-left: 15px;
+}

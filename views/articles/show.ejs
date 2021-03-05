@@ -1,17 +1,16 @@
-<%- include('partials_head') %>  
+<%- include('../partials/_blogcss_head') %>
 
-    <div class="container">
-        <h1 class = "mb-3"><%= article.title %></h1>
-        <div class = "text-muted mb-2"><%= article.createdAt.toLocaleDateString() %>
-        </div>
-        <div>
-            <a href = "/" class= "btn btn-secondary">All articles</a>
-            <a href = "/articles/edit/<%= article.id%>" class = "btn btn-info">Edit</a>
-        </div> 
-        <div>
-           <%- article.sanitizedHtml %>
-        </div>
-        
+<%- include('../partials/_field_navbar.ejs') %>
+
+<div class="container">
+    <h1 class = "mb-4 mt-4"><%= article.title %></h1>
+    <div class = "text-muted mb-2"><%= article.createdAt.toLocaleDateString() %></div>
+    <a href = "/blog" class= "btn btn-secondary">All articles</a>
+    <a href = "/blog/edit/<%= article.id%>" class = "btn btn-info">Edit</a><hr>
+    
+    <div>
+        <%-article.sanitizedHtml%>
     </div>
-</body>
-</html>
+</div>   
+
+<%- include('../partials/_field_footer') %>
