@@ -1,8 +1,3 @@
-    <div class ="mb-3 form-group">
-        <label for = "Image">Upload Image</label>
-        <input type= "file" name="image" id="image" class= "form-control-file"> 
-    </div>
-
     <div class="mb-3 form-group">
         <label for = "title">Title</label>
         <input required value="<%= article.title %>" type = "text" name = "title" id = "title" class="form-control">
@@ -15,5 +10,6 @@
         <label for = "markdown">Markdown</label>
         <textarea required name ="markdown" id = "markdown"  class="form-control"><%= article.markdown %></textarea>
     </div>
+    
     <a href = "/blog" class="btn btn-secondary">Cancel</a>
     <button type = "submit" class = "btn btn-primary">Save</button>
